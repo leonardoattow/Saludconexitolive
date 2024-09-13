@@ -3,9 +3,302 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Salud con Éxito</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>HOLAA</h1>
+    <h1 class="titulo">Suscríbete a la masterclass Método Kihesana</h1>
+    <p class="Pprincipio"> Soy médico anestesióloga con más de 20 años de experiencia  y  en los últimos 5 años, me he enfocado en la medicina natural a través de metodologías basadas en  la medicina tradicional china, además de la aromaterapia y la magnetoterapia para ofrecer la mejora holística de manera natural. Ayudando a más de 200 personas a sentirse mejor mejorando su bienestar.</p>
+
+    <div class="formulario">
+        <form action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="ea34b092-5a07-4d93-bd47-309da4874064">
+            
+            
+            <input type="text" id="name" name="name" placeholder="Ingresa tu nombre" required>
+
+            
+            <input type="email" id="email" name="email" placeholder="Tu mejor correo electrónico" required>
+            <div class="textarea-group">
+                
+                <select>
+                    <option value="+54">+54 - Argentina</option>
+<option value="+55">+55 - Brasil</option>
+<option value="+56">+56 - Chile</option>
+<option value="+57">+57 - Colombia</option>
+
+<option value="+34">+34 - España</option>
+<option value="+1">+1 - Estados Unidos</option>
+<option value="+593">+593 - Ecuador</option>
+<option value="+503">+503 - El Salvador</option>
+<option value="+502">+502 - Guatemala</option>
+<option value="+504">+504 - Honduras</option>
+<option value="+505">+505 - Nicaragua</option>
+<option value="+507">+507 - Panamá</option>
+<option value="+595">+595 - Paraguay</option>
+<option value="+51">+51 - Perú</option>
+
+<option value="+52">+52 - México</option>
+<option value="+1 809">+1 809 - Rep. Dominicana</option>
+<option value="+1 829">+1 829 - Rep. Dominicana</option>
+<option value="+1 849">+1 849 - Rep. Dominicana</option>
+<option value="+598">+598 - Uruguay</option>
+<option value="+58">+58 - Venezuela</option>
+
+                    <!-- Más opciones de códigos de área -->
+                </select>
+                
+                <input type="email" id="email" name="email" placeholder=" Teléfono " required>
+            </div>
+
+            <input type="hidden" name="redirect" value="https://web3forms.com/success">
+            <button type="submit">Enviar</button>
+        </form>
+    
+</div>
 </body>
 </html>
+
+
+<style>
+body {
+    background-color: #fae8e8;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.titulo {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #290910;
+    text-align: center;
+    margin-top: 5vh;
+    font-size: 6vh; /* Ajuste para pantallas grandes */
+    animation: fadeInUp 1s ease-out;
+}
+
+.Pprincipio {
+    font-family: sans-serif;
+    font-weight: bold;
+    color: #290910;
+    text-align: center;
+    margin: 0 20%; /* Margen horizontal para pantallas grandes */
+    line-height: 1.5;
+    animation: fadeInUp 1s ease-out;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 60vw; /* Ancho del formulario ajustado al 60% de la vista del ancho */
+    margin: 0 auto; /* Centra el formulario horizontalmente */
+    padding: 5vh; /* Padding ajustado */
+    border: 1px solid #ddd;
+    border-radius: 2vh; /* Bordes redondeados del formulario */
+    box-shadow: 0 4vh 8vh rgba(255, 0, 0, 0.2); /* Sombra aumentada */
+    background-color: #c77c8a;
+    margin-top: 3.8vh;
+}
+
+.formulario input,
+.formulario textarea,
+.formulario button {
+    width: 60vw; /* Ancho del 60% de la vista del ancho */
+    max-width: 80vw; /* Ancho máximo del 80% de la vista del ancho */
+    padding: 2vh; /* Padding ajustado */
+    margin: 2vh 0; /* Margen ajustado */
+    border: 1px solid #ccc;
+    border-radius: 2vh; /* Bordes redondeados para los campos de entrada y botón */
+    box-sizing: border-box; /* Incluye el padding y border en el ancho total */
+    font-family: sans-serif; /* Define la fuente para los campos de entrada y área de texto */
+    overflow: hidden; /* Evita el desbordamiento del contenido */
+}
+
+.formulario input,
+.formulario button {
+    height: 6vh; /* Altura ajustada para los campos de entrada y botón */
+}
+
+.formulario textarea {
+    height: 6vh; /* Altura igualada al input para mantener el tamaño */
+    resize: none; /* Deshabilita el redimensionamiento del textarea */
+    overflow: hidden; /* Evita el desbordamiento del contenido */
+}
+
+.formulario button {
+    background-color: #3a1e1a;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    animation: pulseButton 1s ease-in-out infinite; /* Aplica la animación de pulsación */
+}
+
+.formulario button:hover {
+    background-color: #1d0606;
+    animation: none; /* Detiene la animación al pasar el mouse */
+}
+
+.formulario input::placeholder,
+.formulario textarea::placeholder {
+    color: #aaa; /* Color del texto del placeholder */
+}
+
+.formulario label {
+    margin: 2vh 0; /* Margen ajustado */
+    display: block;
+    text-align: left; /* Alinea las etiquetas a la izquierda dentro del contenedor del formulario */
+    width: 100%; /* Asegura que las etiquetas ocupen el ancho completo del contenedor */
+}
+
+.phone-group {
+    display: flex;
+    width: 100%; /* Ocupa todo el ancho del contenedor del formulario */
+    gap: 1vh; /* Espacio entre el select y el input */
+    align-items: center; /* Alinea verticalmente el select y el input */
+}
+
+.phone-group select {
+    height: 6vh; /* Altura fija para hacer el select cuadrado */
+    width: 20%; /* Ocupa el 20% del ancho del contenedor */
+    border: 1px solid #ccc;
+    border-radius: 2vh;
+    padding: 1vh; /* Padding ajustado */
+    font-family: sans-serif;
+    text-align: left; /* Alinea el contenido a la izquierda */
+}
+
+.phone-group input {
+    flex: 1; /* Asegura que el campo de teléfono se ajuste al tamaño disponible */
+    height: 6vh; /* Altura igual que los otros cuadros */
+    border: 1px solid #ccc;
+    border-radius: 2vh;
+    padding: 1.5vh;
+    font-family: sans-serif;
+}
+
+.textarea-group {
+    display: flex;
+    width: 97.7%; /* Ocupa todo el ancho disponible */
+    gap: 1vh; /* Espacio entre el select y el textarea */
+    align-items: center; /* Alinea verticalmente los elementos */
+}
+
+.textarea-group select {
+    width: 12%; /* Ocupa el 12% del ancho del contenedor */
+    height: 6vh; /* Mantén la altura fija */
+    border: 1px solid #ccc;
+    border-radius: 2vh;
+    padding: 1vh;
+    font-family: sans-serif;
+    text-align: left; /* Alinea el contenido a la izquierda */
+}
+
+.textarea-group textarea {
+    width: 80%; /* Ocupa el 80% del ancho del contenedor */
+    height: 6vh; /* Mantén la altura */
+    resize: none; /* Deshabilita el redimensionamiento */
+    border: 1px solid #ccc;
+    border-radius: 2vh;
+    padding: 1vh;
+    font-family: sans-serif;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .titulo {
+        font-size: 8vw; /* Ajuste para pantallas más pequeñas */
+    }
+
+    .Pprincipio {
+        margin: 0 5vw; /* Ajuste de margen horizontal para pantallas pequeñas */
+    }
+
+    .formulario {
+        width: 90vw; /* Ancho ajustado para pantallas más pequeñas */
+        padding: 4vw; /* Padding ajustado para pantallas más pequeñas */
+    }
+
+    .formulario input,
+    .formulario textarea,
+    .formulario button {
+        width: 100%; /* Ajuste del ancho para pantallas más pequeñas */
+        max-width: 100%; /* Ajuste del ancho máximo para pantallas más pequeñas */
+    }
+
+    .phone-group {
+        flex-direction: column; /* Ajusta la dirección de los elementos para pantallas más pequeñas */
+    }
+
+    .phone-group select {
+        width: 100%; /* Ajuste de ancho para pantallas más pequeñas */
+    }
+
+    .phone-group input {
+        width: 100%; /* Ajuste de ancho para pantallas más pequeñas */
+        margin-top: 1vh; /* Espacio entre select y input */
+    }
+
+    .textarea-group {
+        flex-direction: column; /* Ajusta la dirección de los elementos para pantallas más pequeñas */
+    }
+
+    .textarea-group select {
+        width: 100%; /* Ajuste de ancho para pantallas más pequeñas */
+    }
+
+    .textarea-group textarea {
+        width: 100%; /* Ajuste de ancho para pantallas más pequeñas */
+        margin-top: 1vh; /* Espacio entre select y textarea */
+    }
+}
+
+@media (max-width: 480px) {
+    .titulo {
+        font-size: 10vw; /* Ajuste para pantallas aún más pequeñas */
+    }
+
+    .Pprincipio {
+        margin: 0 2vw; /* Ajuste de margen horizontal para pantallas más pequeñas */
+    }
+
+    .formulario {
+        width: 95vw; /* Ancho ajustado para pantallas más pequeñas */
+        padding: 3vw; /* Padding ajustado para pantallas más pequeñas */
+    }
+
+    .formulario input,
+    .formulario textarea,
+    .formulario button {
+        padding: 1.5vw; /* Padding ajustado para pantallas más pequeñas */
+        margin: 1vw 0; /* Margen ajustado para pantallas más pequeñas */
+    }
+
+    .phone-group select,
+    .textarea-group select,
+    .textarea-group textarea {
+        width: 100%; /* Ajuste del ancho para pantallas más pequeñas */
+    }
+
+    .phone-group input {
+        width: 100%; /* Ajuste del ancho para pantallas más pequeñas */
+    }
+}
+
+
+    </style>
+
+
+</style>
