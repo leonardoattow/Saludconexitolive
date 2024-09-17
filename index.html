@@ -8,62 +8,64 @@
 </head>
 <body>
 
-    <h1 class="titulo">Suscríbete a la masterclass Método Kihesana</h1>
+    <h1 class="titulo">Suscríbete a la masterclass <span style="color: #678475;">Método Kihesana</span> </h1>
+
     <p class="Pprincipio"> Soy médico anestesióloga con más de 20 años de experiencia  y  en los últimos 5 años, me he enfocado en la medicina natural a través de metodologías basadas en  la medicina tradicional china, además de la aromaterapia y la magnetoterapia para ofrecer la mejora holística de manera natural. Ayudando a más de 200 personas a sentirse mejor mejorando su bienestar.</p>
 
     <div class="formulario">
         <form action="https://api.web3forms.com/submit" method="POST">
             <input type="hidden" name="access_key" value="ea34b092-5a07-4d93-bd47-309da4874064">
             
+            <input type="text" id="name" name="name" placeholder="Ingresa tu nombre" maxlength="200" required>
             
-            <input type="text" id="name" name="name" placeholder="Ingresa tu nombre" required>
-
+            <input type="email" id="email" name="email" placeholder="Tu mejor correo electrónico" maxlength="200" required>
             
-            <input type="email" id="email" name="email" placeholder="Tu mejor correo electrónico" required>
             <div class="textarea-group">
-                
-                <select>
+                <select id="country" name="country" required>
                     <option value="+54">+54 - Argentina</option>
-<option value="+55">+55 - Brasil</option>
-<option value="+56">+56 - Chile</option>
-<option value="+57">+57 - Colombia</option>
-
-<option value="+34">+34 - España</option>
-<option value="+1">+1 - Estados Unidos</option>
-<option value="+593">+593 - Ecuador</option>
-<option value="+503">+503 - El Salvador</option>
-<option value="+502">+502 - Guatemala</option>
-<option value="+504">+504 - Honduras</option>
-<option value="+505">+505 - Nicaragua</option>
-<option value="+507">+507 - Panamá</option>
-<option value="+595">+595 - Paraguay</option>
-<option value="+51">+51 - Perú</option>
-
-<option value="+52">+52 - México</option>
-<option value="+1 809">+1 809 - Rep. Dominicana</option>
-<option value="+1 829">+1 829 - Rep. Dominicana</option>
-<option value="+1 849">+1 849 - Rep. Dominicana</option>
-<option value="+598">+598 - Uruguay</option>
-<option value="+58">+58 - Venezuela</option>
-
+                    <option value="+55">+55 - Brasil</option>
+                    <option value="+56">+56 - Chile</option>
+                    <option value="+57">+57 - Colombia</option>
+                    <option value="+34">+34 - España</option>
+                    <option value="+1">+1 - Estados Unidos</option>
+                    <option value="+593">+593 - Ecuador</option>
+                    <option value="+503">+503 - El Salvador</option>
+                    <option value="+502">+502 - Guatemala</option>
+                    <option value="+504">+504 - Honduras</option>
+                    <option value="+505">+505 - Nicaragua</option>
+                    <option value="+507">+507 - Panamá</option>
+                    <option value="+595">+595 - Paraguay</option>
+                    <option value="+51">+51 - Perú</option>
+                    <option value="+52">+52 - México</option>
+                    <option value="+1 809">+1 809 - Rep. Dominicana</option>
+                    <option value="+1 829">+1 829 - Rep. Dominicana</option>
+                    <option value="+1 849">+1 849 - Rep. Dominicana</option>
+                    <option value="+598">+598 - Uruguay</option>
+                    <option value="+58">+58 - Venezuela</option>
                     <!-- Más opciones de códigos de área -->
                 </select>
                 
-                <input type="email" id="email" name="email" placeholder=" Teléfono " required>
+                <input type="text" id="phone" name="phone" placeholder="Teléfono" maxlength="200" oninput="validatePhoneNumber(this)" required>
+    
+                <script>
+                    function validatePhoneNumber(input) {
+                        // Reemplaza todo lo que no sea un dígito con una cadena vacía
+                        input.value = input.value.replace(/[^0-9]/g, '');
+                    }
+                </script>
             </div>
-
+    
             <input type="hidden" name="redirect" value="https://web3forms.com/success">
             <button type="submit">Enviar</button>
         </form>
+    </div>
     
-</div>
-
   
 </body>
 </html>
 
 
-<style>
+<style type="text/css">
 body {
     background-color: #fae8e8;
     margin: 0;
@@ -90,6 +92,8 @@ body {
     font-size: 6vh; /* Ajuste para pantallas grandes */
     animation: fadeInUp 1s ease-out;
 }
+
+
 
 .Pprincipio {
     font-family: sans-serif;
@@ -136,9 +140,14 @@ body {
 }
 
 .formulario textarea {
-    height: 6vh; /* Altura igualada al input para mantener el tamaño */
+    width: 100%; /* Ajusta el ancho al 100% del contenedor */
+    max-width: 500px; /* Tamaño máximo en píxeles para el textarea */
+    height: 6vh; /* Altura fija */
     resize: none; /* Deshabilita el redimensionamiento del textarea */
-    overflow: hidden; /* Evita el desbordamiento del contenido */
+    border: 1px solid #ccc;
+    border-radius: 2vh;
+    padding: 1vh;
+    font-family: sans-serif;
 }
 
 .formulario button {
@@ -223,15 +232,19 @@ body {
 @media (max-width: 768px) {
     .titulo {
         font-size: 8vw; /* Ajuste para pantallas más pequeñas */
+        text-align: left; /* Alinea el texto a la izquierda */
+        margin: 5vh 5% 2vh; /* Margen superior de 5vh, horizontal de 5% y margen inferior de 2vh */
     }
 
     .Pprincipio {
-        margin: 0 5vw; /* Ajuste de margen horizontal para pantallas pequeñas */
+        margin: 3vh 5%; /* Margen superior de 3vh y margen horizontal de 5% */
+        text-align: justify; /* Justifica el texto en el modo responsive */
     }
 
     .formulario {
         width: 90vw; /* Ancho ajustado para pantallas más pequeñas */
         padding: 4vw; /* Padding ajustado para pantallas más pequeñas */
+        margin: 4vh auto 0; /* Margen superior reducido a 4vh, centrado horizontalmente */
     }
 
     .formulario input,
@@ -241,45 +254,49 @@ body {
         max-width: 100%; /* Ajuste del ancho máximo para pantallas más pequeñas */
     }
 
+    .formulario textarea {
+        max-width: 100%; /* Mantén el ancho máximo del textarea constante */
+        width: 100%; /* Ajuste del ancho para pantallas más pequeñas */
+        height: 6vh; /* Mantén la altura constante */
+        margin-top: 1vh; /* Espacio entre select y textarea */
+    }
+
     .phone-group {
+        display: flex;
         flex-direction: column; /* Ajusta la dirección de los elementos para pantallas más pequeñas */
     }
 
     .phone-group select {
-        width: 100%; /* Ajuste de ancho para pantallas más pequeñas */
+        width: 20%; /* Ajuste del ancho del select */
     }
 
     .phone-group input {
-        width: 100%; /* Ajuste de ancho para pantallas más pequeñas */
+        width: 75%; /* Ajuste del ancho del input */
         margin-top: 1vh; /* Espacio entre select y input */
     }
 
-    .textarea-group {
-        flex-direction: column; /* Ajusta la dirección de los elementos para pantallas más pequeñas */
-    }
-
-    .textarea-group select {
-        width: 100%; /* Ajuste de ancho para pantallas más pequeñas */
-    }
-
+    .textarea-group select,
     .textarea-group textarea {
-        width: 100%; /* Ajuste de ancho para pantallas más pequeñas */
-        margin-top: 1vh; /* Espacio entre select y textarea */
+        width: 100%; /* Ajuste del ancho para pantallas más pequeñas */
     }
 }
 
 @media (max-width: 480px) {
     .titulo {
         font-size: 10vw; /* Ajuste para pantallas aún más pequeñas */
+        text-align: left; /* Alinea el texto a la izquierda */
+        margin: 6vh 4% 2vh; /* Margen superior de 6vh, horizontal de 4% y margen inferior de 2vh */
     }
 
     .Pprincipio {
-        margin: 0 2vw; /* Ajuste de margen horizontal para pantallas más pequeñas */
+        margin: 5vh 4%; /* Margen superior de 5vh y margen horizontal de 4% */
+        text-align: justify; /* Justifica el texto en el modo responsive */
     }
 
     .formulario {
-        width: 95vw; /* Ancho ajustado para pantallas más pequeñas */
+        width: 90vw; /* Ancho ajustado para pantallas más pequeñas */
         padding: 3vw; /* Padding ajustado para pantallas más pequeñas */
+        margin: 6vh auto 0; /* Margen superior reducido a 6vh, centrado horizontalmente */
     }
 
     .formulario input,
@@ -289,19 +306,62 @@ body {
         margin: 1vw 0; /* Margen ajustado para pantallas más pequeñas */
     }
 
-    .phone-group select,
+    .formulario textarea {
+        max-width: 100%; /* Mantén el ancho máximo del textarea constante */
+        width: 100%; /* Ajuste del ancho para pantallas más pequeñas */
+        height: 6vh; /* Mantén la altura constante */
+    }
+
+    .phone-group select {
+        width: 20%; /* Ajuste del ancho del select */
+    }
+
+    .phone-group input {
+        width: 75%; /* Ajuste del ancho del input */
+    }
+
     .textarea-group select,
     .textarea-group textarea {
         width: 100%; /* Ajuste del ancho para pantallas más pequeñas */
     }
+}
 
-    .phone-group input {
-        width: 100%; /* Ajuste del ancho para pantallas más pequeñas */
+/* Animación del formulario */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
     }
 }
 
+.formulario {
+    animation: bounce 2s infinite; /* Animación de rebote para el formulario */
+}
 
-    </style>
+/* Animación del botón de enviar */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.formulario button {
+    animation: pulse 1.5s infinite; /* Animación de pulso para el botón */
+}
+
+
+   
 
 
 </style>
