@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Masterclass</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <h1 class="titulo">Masterclass &nbsp;<span style="color:#678475;">Método Kihesana</span></h1>
+
+    <section id="video-section" style="text-align: center; padding: 2.5em;">
+        <div style="position: relative; width: 90%; height: 0; padding-bottom: 56.25%; margin: 0 auto; background: #000;">    
+            <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" 
+                src="https://www.youtube.com/embed/f-8bZlsqens" 
+                title="YouTube video player" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+            </iframe>
+        </div>
+    </section>
+
+    <div class="div1">
+        <p class="p1">¡Adquiere el taller <span style="color: darkgreen;">AHORA</span>!</p>
+        <div class="b1">TALLER KIHESANA</div>
+    </div>
+
+    <div class="div2">
+        <p class="p2">¿Tienes dudas? Contáctame vía <span style="color: #25D366;">WhatsApp</span></p>
+        <div class="b2"><i class="fa-brands fa-whatsapp"></i> WHATSAPP</div>
+    </div>
+
+    <style type="text/css">
+        body {
+            background-color: #fae8e8;
+        }
+
+        h1 {
+            display: flex;
+            font-size: 2.8125em;
+            justify-content: center;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #290910;
+        }
+
+        .p1, .b1 {
+            display: inline-block;
+            vertical-align: middle;
+            margin: 0;
+            padding: 0;
+        }
+
+        .p1 {
+            margin-right: 1em;
+            font-size: 2.15em;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bolder;
+            color: #290910;
+        }
+
+        .div1 {
+            margin: 2.8125em 0 3.9375em 5.0625em;
+        }
+
+        .b1 {
+            width: 14.0625em;
+            background-color: #290910;
+            color: white;
+            border: 0.1125em solid #0D0202;
+            border-radius: 0.9em;
+            padding: 0.5625em 0.84375em;
+            text-align: center;
+            font-size: 1.125em;
+            cursor: pointer;
+            white-space: nowrap;
+            height: 2.8125em;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bolder;
+            line-height: 2.8125em;
+            box-shadow: 0.2em 0.2em 0.5em rgba(0, 0, 0, 0.5);
+            animation: moveSideToSide 2s ease-in-out infinite;
+            transition: background-color 0.3s;
+        }
+
+        .b1:hover {
+            background-color: #d9534f;
+            animation: none;
+            border: 2px solid #d9534f;
+        }
+
+        @keyframes moveSideToSide {
+            0% {
+                transform: translateX(0);
+            }
+            50% {
+                transform: translateX(10px);
+            }
+            100% {
+                transform: translateX(0);
+            }
+        }
+
+        .div2 {
+            margin: 2.8125em 0 3.9375em 5.0625em;
+            display: flex;
+            align-items: center;
+        }
+
+        .p2 {
+            margin-right: 1em;
+            font-size: 1.5625em;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bolder;
+            color: #290910;
+        }
+
+        .b2 {
+            width: 8.75em;
+            background-color: #25D366;
+            color: white;
+            border: 0.1125em solid #25D366;
+            border-radius: 2.0625em;
+            padding: 0.5625em 0.84375em;
+            text-align: center;
+            font-size: 1.125em;
+            cursor: pointer;
+            white-space: nowrap;
+            height: 2.8125em;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bolder;
+            line-height: 2.8125em;
+            box-shadow: 0.2em 0.2em 0.5em rgba(0, 0, 0, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: moveUpDown 2s ease-in-out infinite;
+            transition: background-color 0.3s;
+        }
+
+        .b2 i {
+            font-size: 1.5em;
+            margin-right: 0.5em;
+        }
+
+        .b2:hover {
+            background-color: #1EBE60;
+            animation: none;
+        }
+
+        @keyframes moveUpDown {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-0.3125em);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        /* Estilos responsivos */
+        @media (max-width: 768px) {
+            h1 {
+                flex-direction: column; /* Cambia la dirección del flex para que los elementos se apilen */
+                align-items: flex-start; /* Alinea el texto a la izquierda */
+                font-size: 2em; /* Ajusta el tamaño de la fuente para dispositivos móviles */
+                margin-left: 1em; /* Agrega un margen izquierdo para separarlo del borde */
+            }
+
+            #video-section > div {
+                width: 90%; /* Cambia el ancho al 90% para que ocupe más espacio en móviles */
+                height: 0; /* Altura cero para mantener la relación de aspecto */
+                padding-bottom: 56.25%; /* Relación de aspecto 16:9 */
+                margin: 0 auto; /* Centrar el video */
+            }
+
+            .div1, .div2 {
+                margin: 1em; /* Reduce el margen */
+                display: block; /* Cambia a bloque para que se alineen verticalmente */
+                text-align: left; /* Alinea el texto a la izquierda */
+            }
+
+            .b1, .b2 {
+                width: 40%; /* Ancho del 40% para los botones */
+                max-width: 150px; /* Ancho máximo de los botones */
+                height: 1,001em; /* Ajusta la altura del botón */
+                margin: 0.5em auto; /* Espaciado vertical entre los botones */
+                font-size: 1em; /* Ajusta el tamaño de la fuente para los botones */
+                margin-left: 0.21875em;
+            }
+
+            .p1, .p2 {
+                font-size: 1.375em; /* Ajusta el tamaño de la fuente para dispositivos móviles */
+            }
+        }
+    </style>
+</body>
+</html>
