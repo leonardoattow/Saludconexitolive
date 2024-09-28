@@ -7,12 +7,12 @@
 </head>
 <body>
 
-    <h1 class="titulo">suscríbete a la masterclass <span style="color: #678475;">Método Kihesana</span> </h1>
+    <h1 class="titulo">Suscríbete a la masterclass <span style="color: #678475;">Método Kihesana</span> </h1>
 
-    <p class="Pprincipio"> Soy médico anestesióloga con más de 20 años de experiencia  y  en los últimos 5 años, me he enfocado en la medicina natural a través de metodologías basadas en  la medicina tradicional china, además de la aromaterapia y la magnetoterapia para ofrecer la mejora holística de manera natural. Ayudando a más de 200 personas a sentirse mejor mejorando su bienestar.</p>
+    <p class="Pprincipio">Soy médico anestesióloga con más de 20 años de experiencia y en los últimos 5 años, me he enfocado en la medicina natural a través de metodologías basadas en la medicina tradicional china, además de la aromaterapia y la magnetoterapia para ofrecer la mejora holística de manera natural. Ayudando a más de 200 personas a sentirse mejor mejorando su bienestar.</p>
 
     <div class="formulario">
-        <form action="https://api.web3forms.com/submit" method="POST">
+        <form id="myForm">
             <input type="hidden" name="access_key" value="ea34b092-5a07-4d93-bd47-309da4874064">
             
             <input type="text" id="name" name="name" placeholder="Ingresa tu nombre" maxlength="200" required>
@@ -41,26 +41,46 @@
                     <option value="+1 849">+1 849 - Rep. Dominicana</option>
                     <option value="+598">+598 - Uruguay</option>
                     <option value="+58">+58 - Venezuela</option>
-                    <!-- Más opciones de códigos de área -->
                 </select>
                 
                 <input type="text" id="phone" name="phone" placeholder="Teléfono" maxlength="200" oninput="validatePhoneNumber(this)" required>
-    
-                <script>
-                    function validatePhoneNumber(input) {
-                        // Reemplaza todo lo que no sea un dígito con una cadena vacía
-                        input.value = input.value.replace(/[^0-9]/g, '');
-                    }
-                </script>
             </div>
     
-            <input type="hidden" name="redirect" value="https://web3forms.com/success">
             <button type="submit">Enviar</button>
         </form>
     </div>
     
-  
+    <script>
+        function validatePhoneNumber(input) {
+            input.value = input.value.replace(/[^0-9]/g, '');
+        }
 
+        document.getElementById("myForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Evita el envío normal del formulario
+
+            const formData = new FormData(this);
+
+            // Envía el formulario utilizando fetch
+            fetch("https://api.web3forms.com/submit", {
+                method: "POST",
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log("Formulario enviado:", data);
+                // Redirige después de  segundo
+                setTimeout(function() {
+                    window.location.href = "./video.html";
+                }, 1000);
+            })
+            .catch(error => {
+                console.error("Error al enviar el formulario:", error);
+            });
+        });
+    </script>
+   
+</body>
+</html>
 
 
 <style type="text/css"> 
@@ -94,7 +114,7 @@ body {
 
 
 .Pprincipio {
-    font-family: sans-serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: bold;
     color: #290910;
     text-align: center;
@@ -116,6 +136,9 @@ body {
     box-shadow: 0 4vh 8vh rgba(255, 0, 0, 0.2); /* Sombra aumentada */
     background-color: #c77c8a;
     margin-top: 3.8vh;
+    flex: 1;
+    margin-bottom: 20vh; /* Ajusta el valor según sea necesario */
+
 }
 
 .formulario input,
@@ -243,6 +266,7 @@ body {
         width: 90vw; /* Ancho ajustado para pantallas más pequeñas */
         padding: 4vw; /* Padding ajustado para pantallas más pequeñas */
         margin: 4vh auto 0; /* Margen superior reducido a 4vh, centrado horizontalmente */
+        
     }
 
     .formulario input,
@@ -359,10 +383,107 @@ body {
 }
 
 
-   
+footer {
+        background-color: #290910;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin: 0;
+            position: relative;
+            bottom: 0;
+            flex-shrink: 0; /* Asegura que el footer no se encoge */
+    }
+
+    body{
+
+        background-color: #fae8e8;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+    }
+
+    .footer-content {
+        max-width: 1200px; /* Máximo ancho del contenido */
+        margin: 0 auto; /* Centra el contenido */
+        padding: 0 20px; /* Espaciado lateral */
+    }
+
+    .social-icons {
+        margin-top: 10px;
+    }
+
+    .social-icons img {
+        width: 30px;
+        margin: 0 10px;
+        vertical-align: middle;
+        transition: transform 0.3s ease;
+    }
+
+    .social-icons img:hover {
+        transform: scale(1.1);
+    }
+
+    /* Estilos responsivos para el footer */
+/* Estilos responsivos para el footer y el cuerpo */
+@media (max-width: 768px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh; /* Asegura que el body ocupe al menos toda la altura de la ventana */
+        margin: 0; /* Elimina márgenes en el body */
+    }
+
+    .content {
+        flex: 1; /* Permite que el contenido ocupe el espacio disponible */
+        padding-bottom: 20px; /* Añade un espacio en la parte inferior para mayor separación */
+    }
+
+    footer {
+        background-color: #290910;
+        color: white;
+        text-align: center;
+        padding: 15px 0; /* Reduce el padding */
+        margin-top: 18vh;
+        position: relative; /* Cambiado a relativo para asegurar que el footer no se desplace */
+        bottom: 0; /* Asegura que esté al fondo */
+    }
+
+    .footer-content p {
+        font-size: 1em; /* Ajusta el tamaño de la fuente para móviles */
+        margin: 0; /* Elimina márgenes en móviles */
+    }
+
+    .social-icons {
+        margin-top: 5px; /* Reduce el margen superior */
+    }
+
+    .social-icons img {
+        width: 25px; /* Ajusta el tamaño de los íconos */
+        margin: 0 5px; /* Espaciado más pequeño entre íconos */
+    }
+}
+
 
 
 </style>
+
+    
+<footer>
+    <p>&copy; 2024 Salud con Éxito. Todos los derechos reservados.</p>
+    <div class="social-icons">
+        <a href="https://www.instagram.com/dra.angieg?igsh=MW54M2RubmNpbWJyYQ==" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+        </a>
+        <a href="https://wa.me/524778900060?text
+        " target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+        </a>
+        <a href="https://www.facebook.com" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">
+        </a>
+    </div>
+</footer>
 
 </body>
 </html> 
