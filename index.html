@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/index.css" />
     <link rel="stylesheet" href="css/styles.css" />
     <title>Salud con Éxito</title>
   </head>
@@ -27,6 +28,12 @@
           type="hidden"
           name="access_key"
           value="ea34b092-5a07-4d93-bd47-309da4874064"
+        />
+
+        <input
+          type="hidden"
+          name="redirect"
+          value="https://saludconexito.live/video.html"
         />
 
         <input
@@ -89,30 +96,14 @@
     <footer>
       <p>&copy; 2024 Salud con Éxito. Todos los derechos reservados.</p>
       <div class="social-icons">
-        <a
-          href="https://www.instagram.com/dra.angieg?igsh=MW54M2RubmNpbWJyYQ=="
-          target="_blank"
-        >
-          <img
-            src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"
-            alt="Instagram"
-          />
+        <a href="https://www.instagram.com/dra.angieg" target="_blank">
+          <img src="./img/icon-instagram.png" alt="Instagram" />
         </a>
-        <a
-          href="https://wa.me/524778900060?text
-        "
-          target="_blank"
-        >
-          <img
-            src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
-            alt="WhatsApp"
-          />
+        <a href="https://wa.me/524778900060?text" target="_blank">
+          <img src="./img/icon-whatsapp.svg" alt="WhatsApp" />
         </a>
         <a href="https://www.facebook.com" target="_blank">
-          <img
-            src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg"
-            alt="Facebook"
-          />
+          <img src="./img/icon-facebook.svg" alt="Facebook" />
         </a>
       </div>
     </footer>
@@ -121,31 +112,6 @@
       function validatePhoneNumber(input) {
         input.value = input.value.replace(/[^0-9]/g, "");
       }
-
-      document
-        .getElementById("myForm")
-        .addEventListener("submit", function (event) {
-          event.preventDefault(); // Evita el envío normal del formulario
-
-          const formData = new FormData(this);
-
-          // Envía el formulario utilizando fetch
-          fetch("https://api.web3forms.com/submit", {
-            method: "POST",
-            body: formData,
-          })
-            .then((response) => response.json())
-            .then((data) => {
-              console.log("Formulario enviado:", data);
-              // Redirige después de  segundo
-              setTimeout(function () {
-                window.location.href = "./video.html";
-              }, 1000);
-            })
-            .catch((error) => {
-              console.error("Error al enviar el formulario:", error);
-            });
-        });
     </script>
   </body>
 </html>
