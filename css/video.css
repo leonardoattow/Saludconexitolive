@@ -3,7 +3,7 @@ h1 {
   font-size: 2.8125em;
   justify-content: center;
   font-family: Arial, Helvetica, sans-serif;
-  color: #290910;
+  color: var(--marron-titulos);
 }
 
 .p1,
@@ -19,7 +19,7 @@ h1 {
   font-size: 2.15em;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bolder;
-  color: #290910;
+  color: var(--marron-titulos);
 }
 
 .div1 {
@@ -28,7 +28,7 @@ h1 {
 
 .b1 {
   width: 14.0625em;
-  background-color: #290910;
+  background-color: var(--marron-titulos);
   color: white;
   border: 0.1125em solid #0d0202;
   border-radius: 0.9em;
@@ -75,7 +75,7 @@ h1 {
   font-size: 1.5625em;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bolder;
-  color: #290910;
+  color: var(--marron-titulos);
 }
 
 .b2 {
@@ -166,7 +166,7 @@ h1 {
 }
 
 footer {
-  background-color: #290910;
+  background-color: var(--marron-titulos);
   color: white;
   text-align: center;
   padding: 20px 0;
@@ -194,7 +194,7 @@ footer {
 
 /* Estilos para el footer */
 footer {
-  background-color: #290910;
+  background-color: var(--marron-titulos);
   color: white;
   text-align: center;
   padding: 20px 0;
@@ -241,7 +241,7 @@ footer {
   }
 
   footer {
-    background-color: #290910;
+    background-color: var(--marron-titulos);
     color: white;
     text-align: center;
     padding: 15px 0; /* Reduce el padding */

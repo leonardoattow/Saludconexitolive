@@ -1,6 +1,6 @@
 .titulo {
   font-family: Arial, Helvetica, sans-serif;
-  color: #290910;
+  color: var(--marron-titulos);
   text-align: center;
   margin-top: 5vh;
   font-size: 6vh; /* Ajuste para pantallas grandes */
@@ -11,7 +11,7 @@
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: bold;
-  color: #290910;
+  color: var(--marron-titulos);
   text-align: center;
   margin: 0 20%; /* Margen horizontal para pantallas grandes */
   line-height: 1.5;
@@ -101,7 +101,7 @@
 }
 
 footer {
-  background-color: #290910;
+  background-color: var(--marron-titulos);
   color: white;
   text-align: center;
   padding: 20px 0;
@@ -297,7 +297,7 @@ footer {
   }
 
   footer {
-    background-color: #290910;
+    background-color: var(--marron-titulos);
     color: white;
     text-align: center;
     padding: 15px 0; /* Reduce el padding */
