@@ -1,0 +1,284 @@
+h1 {
+  display: flex;
+  font-size: 2.8125em;
+  justify-content: center;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--marron-titulos);
+}
+
+.p1,
+.b1 {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0;
+  padding: 0;
+}
+
+.p1 {
+  margin-right: 1em;
+  font-size: 2.15em;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bolder;
+  color: var(--marron-titulos);
+}
+
+.div1 {
+  margin: 2.8125em 0 3.9375em 5.0625em;
+}
+
+.b1 {
+  width: 14.0625em;
+  background-color: var(--marron-titulos);
+  color: white;
+  border: 0.1125em solid #0d0202;
+  border-radius: 0.9em;
+  padding: 0.5625em 0.84375em;
+  text-align: center;
+  font-size: 1.125em;
+  cursor: pointer;
+  white-space: nowrap;
+  height: 2.8125em;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bolder;
+  line-height: 2.8125em;
+  box-shadow: 0.2em 0.2em 0.5em rgba(0, 0, 0, 0.5);
+  animation: moveSideToSide 2s ease-in-out infinite;
+  transition: background-color 0.3s;
+}
+
+.b1:hover {
+  background-color: #d9534f;
+  animation: none;
+  border: 2px solid #d9534f;
+}
+
+@keyframes moveSideToSide {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.div2 {
+  margin: 2.8125em 0 3.9375em 5.0625em;
+  display: flex;
+  align-items: center;
+}
+
+.p2 {
+  margin-right: 1em;
+  font-size: 1.5625em;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bolder;
+  color: var(--marron-titulos);
+}
+
+.b2 {
+  width: 8.75em;
+  background-color: #25d366;
+  color: white;
+  border: 0.1125em solid #25d366;
+  border-radius: 2.0625em;
+  padding: 0.5625em 0.84375em;
+  text-align: center;
+  font-size: 1.125em;
+  cursor: pointer;
+  white-space: nowrap;
+  height: 2.8125em;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bolder;
+  line-height: 2.8125em;
+  box-shadow: 0.2em 0.2em 0.5em rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: moveUpDown 2s ease-in-out infinite;
+  transition: background-color 0.3s;
+  text-decoration: none; /* Para eliminar el subrayado */
+}
+
+.b2 i {
+  font-size: 1.5em;
+  margin-right: 0.5em;
+}
+
+.b2:hover {
+  background-color: #1ebe60;
+  animation: none;
+}
+
+@keyframes moveUpDown {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-0.3125em);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  h1 {
+    flex-direction: column; /* Cambia la dirección del flex para que los elementos se apilen */
+    align-items: flex-start; /* Alinea el texto a la izquierda */
+    font-size: 2em; /* Ajusta el tamaño de la fuente para dispositivos móviles */
+    margin-left: 1em; /* Agrega un margen izquierdo para separarlo del borde */
+  }
+
+  #video-section > div {
+    width: 90%; /* Cambia el ancho al 90% para que ocupe más espacio en móviles */
+    height: 0; /* Altura cero para mantener la relación de aspecto */
+    padding-bottom: 56.25%; /* Relación de aspecto 16:9 */
+    margin: 0 auto; /* Centrar el video */
+  }
+
+  .div1,
+  .div2 {
+    margin: 1em; /* Reduce el margen */
+    display: block; /* Cambia a bloque para que se alineen verticalmente */
+    text-align: left; /* Alinea el texto a la izquierda */
+  }
+
+  .b1,
+  .b2 {
+    width: 40%; /* Ancho del 40% para los botones */
+    max-width: 150px; /* Ancho máximo de los botones */
+    height: 30px; /* Ajusta la altura del botón */
+    line-height: 30px; /* Line-height igual a la altura para centrar verticalmente */
+    margin: 0.5em auto; /* Espaciado vertical entre los botones */
+    font-size: 0.9375em; /* Ajusta el tamaño de la fuente para los botones */
+    margin-left: 0.21875em;
+    text-align: center; /* Centrar texto horizontalmente */
+  }
+
+  .p1,
+  .p2 {
+    font-size: 1.375em; /* Ajusta el tamaño de la fuente para dispositivos móviles */
+  }
+}
+
+footer {
+  background-color: var(--marron-titulos);
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  margin: 0;
+  position: relative;
+  bottom: 0;
+  flex-shrink: 0; /* Asegura que el footer no se encoge */
+  margin-top: auto; /* Mueve el footer al final del contenido */
+}
+
+.social-icons {
+  margin-top: 10px;
+}
+
+.social-icons img {
+  width: 30px;
+  margin: 0 10px;
+  vertical-align: middle;
+  transition: transform 0.3s ease;
+}
+
+.social-icons img:hover {
+  transform: scale(1.1);
+}
+
+/* Estilos para el footer */
+footer {
+  background-color: var(--marron-titulos);
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  margin: 0;
+  position: relative;
+  bottom: 0;
+  flex-shrink: 0; /* Asegura que el footer no se encoge */
+}
+
+.footer-content {
+  max-width: 1200px; /* Máximo ancho del contenido */
+  margin: 0 auto; /* Centra el contenido */
+  padding: 0 20px; /* Espaciado lateral */
+}
+
+.social-icons {
+  margin-top: 10px;
+}
+
+.social-icons img {
+  width: 30px;
+  margin: 0 10px;
+  vertical-align: middle;
+  transition: transform 0.3s ease;
+}
+
+.social-icons img:hover {
+  transform: scale(1.1);
+}
+
+/* Estilos responsivos para el footer */
+/* Estilos responsivos para el footer y el cuerpo */
+@media (max-width: 768px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Asegura que el body ocupe al menos toda la altura de la ventana */
+    margin: 0; /* Elimina márgenes en el body */
+  }
+
+  .content {
+    flex: 1; /* Permite que el contenido ocupe el espacio disponible */
+    padding-bottom: 20px; /* Añade un espacio en la parte inferior para mayor separación */
+  }
+
+  footer {
+    background-color: var(--marron-titulos);
+    color: white;
+    text-align: center;
+    padding: 15px 0; /* Reduce el padding */
+    margin: 0; /* Asegura que el margen sea cero */
+    position: relative; /* Cambiado a relativo para asegurar que el footer no se desplace */
+    bottom: 0; /* Asegura que esté al fondo */
+  }
+
+  .footer-content p {
+    font-size: 1em; /* Ajusta el tamaño de la fuente para móviles */
+    margin: 0; /* Elimina márgenes en móviles */
+  }
+
+  .social-icons {
+    margin-top: 5px; /* Reduce el margen superior */
+  }
+
+  .social-icons img {
+    width: 25px; /* Ajusta el tamaño de los íconos */
+    margin: 0 5px; /* Espaciado más pequeño entre íconos */
+  }
+}
+
+.botones {
+  flex: 1;
+}
+
+.video-section {
+  text-align: center;
+  padding: 2.5em;
+}
+
+.video-section__container {
+  position: relative;
+  width: 90%;
+  height: 0;
+  padding-bottom: 56.25%;
+  margin: 0 auto;
+  background: #000;
+}

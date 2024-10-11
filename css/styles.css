@@ -1,0 +1,16 @@
+:root {
+  --rosado-fondo: #fae8e8;
+  --marron-titulos: #290910;
+}
+
+body {
+  background-color: var(--rosado-fondo);
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.titulo--green {
+  color: #678475;
+}
